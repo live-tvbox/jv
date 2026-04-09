@@ -3,152 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ERS Beauty | High-End Skincare</title>
+    <title>ERS Beauty | Premium Skincare</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #000; color: white; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1a1a1a; scroll-behavior: smooth; }
         .heading-font { font-family: 'Syncopate', sans-serif; }
         
         .pink-glow-text {
             color: #ff2d85;
-            text-shadow: 0 0 25px rgba(255, 45, 133, 0.7);
+            text-shadow: 0 0 15px rgba(255, 45, 133, 0.3);
         }
         
         .pink-btn {
             background: linear-gradient(90deg, #ff2d85 0%, #cc005e 100%);
-            box-shadow: 0 10px 30px -10px rgba(255, 45, 133, 0.6);
+            box-shadow: 0 10px 25px -5px rgba(255, 45, 133, 0.4);
+            color: white !important;
         }
 
+        /* Light Theme Hero Overlay */
         .hero-overlay {
-            background: linear-gradient(to right, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%);
+            background: linear-gradient(to right, rgba(255,255,255,0.9) 10%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.8) 100%);
         }
 
         @media (max-width: 768px) {
             .hero-overlay {
-                background: linear-gradient(to top, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.3) 100%);
+                background: linear-gradient(to top, rgba(255,255,255,0.9) 30%, rgba(255,255,255,0.4) 100%);
             }
         }
 
-        /* Custom shape for product background */
+        /* Pink Arch for Why Choose Us */
         .pink-arch {
-            background: #ffb8d1;
-            border-radius: 150px 150px 0 0;
+            background: #ffe4ee;
+            border-radius: 200px 200px 0 0;
         }
     </style>
 </head>
 <body class="overflow-x-hidden">
 
     <!-- Header -->
-    <nav class="fixed w-full z-50 flex justify-between items-center px-6 md:px-20 py-6 bg-black/40 backdrop-blur-md border-b border-white/5">
-        <div class="heading-font text-lg md:text-xl font-bold tracking-tighter text-pink-500">ERS BEAUTY</div>
-        <div class="hidden md:flex space-x-10 text-[10px] font-bold uppercase tracking-[0.3em]">
+    <nav class="fixed w-full z-50 flex justify-between items-center px-6 md:px-20 py-5 bg-white/80 backdrop-blur-md border-b border-zinc-100">
+        <div class="heading-font text-lg md:text-xl font-bold tracking-tighter text-pink-600">ERS BEAUTY</div>
+        <div class="hidden md:flex space-x-10 text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-600">
             <a href="#formula" class="hover:text-pink-500 transition">The Formula</a>
             <a href="#product" class="hover:text-pink-500 transition">Our Product</a>
             <a href="#order" class="hover:text-pink-500 transition">Order Now</a>
         </div>
-        <a href="#order" class="pink-btn text-white text-[10px] font-bold px-8 py-3 rounded-full uppercase tracking-widest transition hover:scale-105">Shop Now</a>
+        <a href="#order" class="pink-btn text-[10px] font-bold px-8 py-3 rounded-full uppercase tracking-widest transition hover:scale-105">Shop Now</a>
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="relative min-h-screen flex items-center justify-center md:justify-start overflow-hidden">
+    <section class="relative min-h-screen flex items-center justify-center md:justify-start overflow-hidden pt-20">
         <div class="absolute inset-0 z-0">
-            <img src="m2.png" alt="Hero Background" class="w-full h-full object-cover object-center md:object-right opacity-60">
+            <img src="m2.png" alt="Hero Background" class="w-full h-full object-cover object-center md:object-right opacity-80">
             <div class="absolute inset-0 hero-overlay"></div>
         </div>
         <div class="container mx-auto px-6 md:px-20 relative z-10">
             <div class="max-w-3xl text-center md:text-left">
-                <p class="text-pink-500 font-bold tracking-[0.4em] text-[10px] md:text-xs uppercase mb-4">The Obsidian Collection</p>
-                <h1 class="heading-font text-4xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-8">RADIANCE <br> <span class="pink-glow-text">REBORN.</span></h1>
-                <p class="text-zinc-300 text-sm md:text-xl max-w-xl mx-auto md:mx-0 leading-relaxed mb-10 font-light">A high-voltage fusion of bio-synthetic peptides and rare botanical extracts. Engineered for the midnight hour.</p>
+                <p class="text-pink-600 font-bold tracking-[0.4em] text-[10px] md:text-xs uppercase mb-4">The Obsidian Collection</p>
+                <h1 class="heading-font text-4xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-8 text-zinc-900">
+                    RADIANCE <br> <span class="pink-glow-text">REBORN.</span>
+                </h1>
+                <p class="text-zinc-600 text-sm md:text-xl max-w-xl mx-auto md:mx-0 leading-relaxed mb-10 font-light">
+                    A high-voltage fusion of bio-synthetic peptides and rare botanical extracts. Engineered for the midnight hour.
+                </p>
                 <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-5">
-                    <a href="#order" class="pink-btn px-12 py-5 rounded-full font-bold uppercase tracking-widest text-xs transition active:scale-95">Begin Transformation</a>
-                    <a href="#formula" class="bg-white/10 backdrop-blur-md border border-white/20 px-12 py-5 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-black transition">The Science</a>
+                    <a href="#order" class="pink-btn px-12 py-5 rounded-full font-bold uppercase tracking-widest text-xs transition active:scale-95 text-center">
+                        Begin Transformation
+                    </a>
+                    <a href="#formula" class="bg-zinc-100 border border-zinc-200 px-12 py-5 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-black hover:text-white transition text-center text-zinc-800">
+                        The Science
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Molecular Alchemy Section (Bento Grid) -->
-    <section id="formula" class="py-32 bg-black relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-pink-900/10 rounded-full blur-[150px] -z-10"></div>
-        <div class="container mx-auto px-6 md:px-20">
-            <div class="mb-20 text-center md:text-left">
-                <h3 class="heading-font text-pink-500 text-xs font-bold tracking-[0.5em] mb-4 uppercase">Advanced Skincare</h3>
-                <h2 class="heading-font text-4xl md:text-6xl font-bold leading-tight italic uppercase">Molecular <br> <span class="text-white/20">Alchemy.</span></h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-                <div class="md:col-span-8 group relative overflow-hidden rounded-[40px] bg-zinc-950 border border-white/5 p-10 flex flex-col justify-end min-h-[450px] hover:border-pink-500/30 transition">
-                    <div class="absolute inset-0 opacity-20"><img src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover" alt="Serum"></div>
-                    <div class="relative z-10">
-                        <h4 class="text-3xl font-bold mb-4 italic uppercase tracking-tighter">24h Hydration <span class="text-pink-500">Lock.</span></h4>
-                        <p class="text-zinc-400 max-w-md">Our proprietary 'Noir-Sphere' complex encapsulates moisture, releasing it steadily.</p>
-                    </div>
-                </div>
-                <div class="md:col-span-4 rounded-[40px] bg-zinc-950 border border-white/5 p-10 group hover:border-pink-500/30 transition">
-                    <i class="fas fa-leaf text-pink-500 text-4xl mb-6"></i>
-                    <h4 class="text-2xl font-bold mb-4 italic uppercase">Organic <br>Extracts</h4>
-                    <p class="text-zinc-500 text-sm">Sourced from volcanic soil for maximum mineral density.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-<!-- NEW SECTION 1: Why Choose Us (Image Enlarged) -->
-<section class="py-24 bg-black overflow-hidden border-t border-white/5">
+    <!-- Molecular Alchemy Section (Fixed Image Visibility & Shadow) -->
+<section id="formula" class="py-32 bg-zinc-50 relative overflow-hidden">
+    <!-- Background Decor (Subtle Pink Glow) -->
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-pink-100/50 rounded-full blur-[150px] -z-10"></div>
+    
     <div class="container mx-auto px-6 md:px-20">
-        <!-- Section Title -->
-        <div class="text-center mb-20">
-            <h2 class="heading-font text-3xl md:text-6xl font-bold mb-6 italic uppercase tracking-tight">
-                Why Choose Our <span class="text-pink-500 pink-glow-text">Skincare?</span>
+        <!-- Section Heading -->
+        <div class="mb-20 text-center md:text-left">
+            <h3 class="heading-font text-pink-600 text-xs font-bold tracking-[0.5em] mb-4 uppercase">Advanced Skincare</h3>
+            <h2 class="heading-font text-4xl md:text-6xl font-bold leading-tight italic uppercase text-zinc-900">
+                Molecular <br> <span class="text-zinc-300">Alchemy.</span>
             </h2>
-            <p class="text-zinc-500 max-w-2xl mx-auto text-sm md:text-base tracking-wide">
-                Discover skincare products crafted with pure, natural ingredients. Elevate your beauty routine with solutions designed to nourish, protect, and renew your skin.
-            </p>
         </div>
-        
-        <div class="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0">
+
+        <!-- Bento Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
             
-            <!-- Left Side Text (Order 2 on Mobile, Order 1 on Desktop) -->
-            <div class="w-full md:w-[30%] space-y-16 order-2 md:order-1 text-center md:text-right">
-                <div class="group">
-                    <h4 class="text-2xl font-bold mb-4 text-pink-500 uppercase tracking-widest italic">100% Natural</h4>
-                    <p class="text-zinc-400 text-sm md:text-base leading-relaxed">Our products are made with pure, natural ingredients—no harsh chemicals, synthetic fragrances, or artificial preservatives.</p>
+            <!-- Large Feature Card (Fixed Visibility) -->
+            <div class="md:col-span-8 group relative overflow-hidden rounded-[40px] bg-white border border-zinc-100 p-10 flex flex-col justify-end min-h-[480px] shadow-[0_15px_40px_rgba(0,0,0,0.03)] hover:shadow-[0_25px_60px_rgba(255,45,133,0.12)] transition-all duration-700">
+                
+                <!-- Image Container with Gradient Overlay -->
+                <div class="absolute inset-0 z-0">
+                    <img src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&q=80&w=800" 
+                         class="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-1000" 
+                         alt="Serum">
+                    
+                    <!-- White Gradient Overlay to make text pop -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-white via-white/40 to-transparent"></div>
                 </div>
-                <div class="group">
-                    <h4 class="text-2xl font-bold mb-4 text-pink-500 uppercase tracking-widest italic">Eco-Friendly</h4>
-                    <p class="text-zinc-400 text-sm md:text-base leading-relaxed">Beauty without harm. We use eco-friendly packaging and none of our products are tested on animals. Always ethical.</p>
+                
+                <!-- Content -->
+                <div class="relative z-10">
+                    <div class="w-14 h-14 mb-8 rounded-2xl bg-pink-500 flex items-center justify-center text-white shadow-lg">
+                        <i class="fas fa-microscope text-xl"></i>
+                    </div>
+                    <h4 class="text-3xl md:text-4xl font-bold mb-4 italic uppercase tracking-tighter text-zinc-900">
+                        24h Hydration <span class="text-pink-600">Lock.</span>
+                    </h4>
+                    <p class="text-zinc-600 max-w-md font-semibold leading-relaxed">
+                        Our proprietary 'Noir-Sphere' complex encapsulates moisture, releasing it steadily throughout your most demanding days.
+                    </p>
                 </div>
             </div>
 
-            <!-- Center Image (Enlarged) -->
-            <div class="w-full md:w-[40%] flex justify-center order-1 md:order-2 py-12 md:py-0">
-                <div class="relative flex justify-center items-center w-full max-w-[450px] md:max-w-[550px]">
-                    
-                    <!-- Background Pink Arch/Circle -->
-                    <div class="absolute  w-64 h-64 md:w-80 md:h-80 bg-pink-400/80 rounded-full blur-3xl opacity-20 animate-pulse"></div>
-                    <div class="pink-arch h-[350px] md:h-[450px] absolute bottom-0 z-0 opacity-90 shadow-2xl"></div>
-                    
-                    
-                    
-                    <!-- Product Image (Scaled Up) -->
-                    <img src="p1.png" alt="Product" 
-                         class="relative z-10 w-full md:w-[115%]  h-auto drop-shadow-[0_25px_25px_rgba(0,0,0,0.5)] transform transition-transform duration-700 hover:scale-110">
+            <!-- Small Card 1 (Dark Theme for Contrast) -->
+            <div class="md:col-span-4 rounded-[40px] bg-zinc-900 border border-zinc-800 p-10 hover:bg-black transition-all duration-500 group text-white shadow-xl flex flex-col justify-center">
+                <div class="text-pink-500 mb-8 text-5xl group-hover:scale-110 transition-transform duration-500">
+                    <i class="fas fa-leaf"></i>
                 </div>
+                <h4 class="text-2xl font-bold mb-4 italic uppercase">Organic <br>Extracts</h4>
+                <p class="text-zinc-400 text-sm leading-relaxed">
+                    Sourced from volcanic soil for maximum mineral density and antioxidant potency.
+                </p>
             </div>
 
-            <!-- Right Side Text (Order 3 on Desktop) -->
-            <div class="w-full md:w-[30%] space-y-16 order-3 text-center md:text-left">
-                <div class="group">
-                    <h4 class="text-2xl font-bold mb-4 text-pink-500 uppercase tracking-widest italic">Expert Approved</h4>
-                    <p class="text-zinc-400 text-sm md:text-base leading-relaxed">Formulated by dermatologists to be safe, effective, and suitable for all skin types. Whether you have sensitive or oily skin.</p>
+            <!-- Small Card 2 (White Theme) -->
+            <div class="md:col-span-4 rounded-[40px] bg-white border border-zinc-100 p-10 hover:shadow-2xl transition-all duration-500 group shadow-[0_10px_30px_rgba(0,0,0,0.02)]">
+                <div class="text-pink-600 mb-8 text-5xl opacity-80 group-hover:opacity-100 transition-opacity">
+                    <i class="fas fa-vial"></i>
                 </div>
-                <div class="group">
-                    <h4 class="text-2xl font-bold mb-4 text-pink-500 uppercase tracking-widest italic">Proven Results</h4>
-                    <p class="text-zinc-400 text-sm md:text-base leading-relaxed">Our natural formulas are clinically tested to deliver visible results. With regular use, enjoy improved hydration and a radiant glow.</p>
+                <h4 class="text-2xl font-bold mb-4 italic uppercase text-zinc-900">Bio-Active <br>Peptides</h4>
+                <p class="text-zinc-500 text-sm leading-relaxed font-medium">
+                    Laboratory-engineered to mimic the skin's natural repair signals for instant firming.
+                </p>
+            </div>
+
+            <!-- Medium Feature Card (Pink Tint) -->
+            <div class="md:col-span-8 rounded-[40px] bg-gradient-to-br from-pink-50 to-white border border-pink-100 p-10 flex flex-col md:flex-row items-center gap-10 hover:shadow-xl transition-all duration-500">
+                <div class="md:w-1/2">
+                    <h4 class="text-3xl font-bold mb-4 italic uppercase leading-none text-zinc-900">Cruelty <br> <span class="text-pink-600 font-extrabold">Free.</span></h4>
+                    <p class="text-zinc-500 text-sm leading-relaxed font-medium">
+                        100% Vegan. Never tested on animals. Always ethical. Because luxury shouldn't cost a life.
+                    </p>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="bg-white p-5 rounded-3xl text-center border border-pink-100 shadow-sm">
+                        <span class="block text-3xl font-bold text-pink-600 italic">0%</span>
+                        <span class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Parabens</span>
+                    </div>
+                    <div class="bg-white p-5 rounded-3xl text-center border border-pink-100 shadow-sm">
+                        <span class="block text-3xl font-bold text-pink-600 italic">100%</span>
+                        <span class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Vegan</span>
+                    </div>
                 </div>
             </div>
 
@@ -156,44 +170,76 @@
     </div>
 </section>
 
-    <!-- NEW SECTION 2: Product Detail with Price (Discovery Style) -->
-    <section id="product" class="py-24 bg-zinc-950">
+    <!-- Why Choose Us Section (White & Pink) -->
+    <section class="py-24 bg-white overflow-hidden">
         <div class="container mx-auto px-6 md:px-20">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold mb-4 italic uppercase">Discover the Best in Natural Skincare</h2>
-                <p class="text-zinc-500">Explore our top products made with premium natural ingredients.</p>
+            <div class="text-center mb-20">
+                <h2 class="heading-font text-3xl md:text-6xl font-bold mb-6 italic uppercase tracking-tight text-zinc-900">
+                    Why Choose Our <span class="text-pink-600">Skincare?</span>
+                </h2>
+                <p class="text-zinc-500 max-w-2xl mx-auto text-sm md:text-base tracking-wide">
+                    Discover skincare products crafted with pure, natural ingredients. Elevate your beauty routine with solutions designed to nourish and protect.
+                </p>
             </div>
-
-            <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24">
-                <!-- Product Image in Pink Container -->
-                <div class="w-full md:w-1/2 bg-[#ffcada] rounded-[50px] p-12 flex justify-center items-center relative overflow-hidden group">
-                    <div class="absolute w-full h-full bg-white/10 scale-0 group-hover:scale-150 transition-transform duration-700 rounded-full"></div>
-                    <img src="pr.png" alt="Product Cream" class="w-64 md:w-80 z-10 drop-shadow-2xl transition group-hover:rotate-6">
+            
+            <div class="flex flex-col md:flex-row items-center justify-between gap-10">
+                <div class="w-full md:w-[30%] space-y-16 order-2 md:order-1 text-center md:text-right">
+                    <div>
+                        <h4 class="text-2xl font-bold mb-4 text-pink-600 uppercase tracking-widest italic">100% Natural</h4>
+                        <p class="text-zinc-500 text-sm md:text-base leading-relaxed font-medium">Pure ingredients—no harsh chemicals or synthetic fragrances.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-bold mb-4 text-pink-600 uppercase tracking-widest italic">Eco-Friendly</h4>
+                        <p class="text-zinc-500 text-sm md:text-base leading-relaxed font-medium">Beauty without harm. 100% vegan and cruelty-free.</p>
+                    </div>
                 </div>
 
-                <!-- Product Text & Price -->
+                <div class="w-full md:w-[40%] flex justify-center order-1 md:order-2">
+                    <div class="relative flex justify-center items-center w-full max-w-[450px] md:max-w-[550px]">
+                        <div class="absolute w-72 h-72 md:w-96 md:h-96 bg-pink-100 rounded-full blur-[80px]"></div>
+                        <!-- <div class="pink-arch w-full h-[400px] md:h-[550px] absolute bottom-0 z-0 opacity-100 shadow-sm border border-pink-100"></div> -->
+                        <img src="p1.png" alt="Product" class="relative z-10 w-[85%] md:w-[110%] h-auto drop-shadow-2xl transform transition hover:scale-105 duration-700">
+                    </div>
+                </div>
+
+                <div class="w-full md:w-[30%] space-y-16 order-3 text-center md:text-left">
+                    <div>
+                        <h4 class="text-2xl font-bold mb-4 text-pink-600 uppercase tracking-widest italic">Expert Approved</h4>
+                        <p class="text-zinc-500 text-sm md:text-base leading-relaxed font-medium">Formulated by dermatologists for all skin types.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-bold mb-4 text-pink-600 uppercase tracking-widest italic">Proven Results</h4>
+                        <p class="text-zinc-500 text-sm md:text-base leading-relaxed font-medium">Visible transformation. Improved hydration and radiant glow.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Detail Section -->
+    <section id="product" class="py-24 bg-zinc-50">
+        <div class="container mx-auto px-6 md:px-20">
+            <div class="text-center mb-16">
+                <h2 class="heading-font text-3xl md:text-5xl font-bold mb-4 italic uppercase text-zinc-900">Product <span class="text-pink-600 font-extrabold">Showcase</span></h2>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24">
+                <div class="w-full md:w-1/2 bg-[#ffe4ee] rounded-[60px] p-12 flex justify-center items-center relative overflow-hidden border border-pink-100 group">
+                    <img src="pr.png" alt="Product" class="w-64 md:w-80 z-10 drop-shadow-2xl transition group-hover:scale-110 duration-700">
+                </div>
                 <div class="w-full md:w-1/2 space-y-8">
-                    <h3 class="text-3xl md:text-4xl font-bold">Hydration Boost Cream</h3>
-                    <p class="text-zinc-400 leading-relaxed">Hydration Boost Cream deeply moisturizes and improves skin elasticity. Its lightweight, non-greasy formula keeps your skin soft and smooth all day.</p>
-                    
+                    <h3 class="heading-font text-3xl md:text-4xl font-bold text-zinc-900">Hydration Boost Cream</h3>
+                    <p class="text-zinc-600 leading-relaxed font-medium">Our best-selling formula deeply moisturizes and improves skin elasticity. Lightweight and non-greasy.</p>
                     <ul class="space-y-4">
-                        <li class="flex items-center gap-3 text-pink-500">
-                            <i class="fas fa-circle text-[8px]"></i>
-                            <span class="text-zinc-300">Deeply hydrates and locks in moisture.</span>
+                        <li class="flex items-center gap-3 text-pink-600 font-bold italic">
+                            <i class="fas fa-check-circle"></i> <span class="text-zinc-700">Deeply hydrates & locks moisture.</span>
                         </li>
-                        <li class="flex items-center gap-3 text-pink-500">
-                            <i class="fas fa-circle text-[8px]"></i>
-                            <span class="text-zinc-300">Enhances skin elasticity and texture.</span>
-                        </li>
-                        <li class="flex items-center gap-3 text-pink-500">
-                            <i class="fas fa-circle text-[8px]"></i>
-                            <span class="text-zinc-300">Lightweight, non-greasy formula.</span>
+                        <li class="flex items-center gap-3 text-pink-600 font-bold italic">
+                            <i class="fas fa-check-circle"></i> <span class="text-zinc-700">Enhances skin texture.</span>
                         </li>
                     </ul>
-
-                    <div class="flex items-center gap-8 pt-4">
-                        <a href="#order" class="bg-black border border-white/20 text-white font-bold py-4 px-10 rounded-full hover:bg-pink-500 hover:border-pink-500 transition">Shop Now</a>
-                        <span class="text-3xl font-bold">$99.00</span>
+                    <div class="flex items-center gap-8 pt-6">
+                        <a href="#order" class="bg-black text-white font-bold py-4 px-10 rounded-full hover:bg-pink-600 transition uppercase tracking-widest text-xs">Buy Now</a>
+                        <span class="text-3xl font-bold text-zinc-900">৳99.00</span>
                     </div>
                 </div>
             </div>
@@ -201,26 +247,28 @@
     </section>
 
     <!-- Order Form Section -->
-    <section id="order" class="py-24 bg-[#050505]">
+    <section id="order" class="py-24 bg-white">
         <div class="container mx-auto px-6">
-            <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-0 rounded-[40px] overflow-hidden border border-white/5 shadow-2xl">
-                <div class="p-10 md:p-16 bg-zinc-900/40 backdrop-blur-md">
-                    <h2 class="heading-font text-4xl font-bold mb-6 italic italic">SECURE YOUR <br><span class="text-pink-500">REGIMEN.</span></h2>
-                    <p class="text-zinc-400 mb-8 font-light">Join the elite. Secure your limited first-edition Obsidian Set today.</p>
+            <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-0 rounded-[40px] overflow-hidden border border-zinc-100 shadow-2xl">
+                <!-- Info Side (Pink) -->
+                <div class="p-10 md:p-16 bg-pink-50">
+                    <h2 class="heading-font text-4xl font-bold mb-6 italic text-zinc-900 uppercase">Secure Your <br><span class="text-pink-600">Regimen.</span></h2>
+                    <p class="text-zinc-600 mb-8 font-medium">Join the elite. Secure your limited first-edition Obsidian Set today.</p>
                     <div class="space-y-6">
-                        <div class="flex items-center gap-4"><i class="fas fa-shipping-fast text-pink-500"></i> <span class="text-xs uppercase font-bold">Free Global Shipping</span></div>
-                        <div class="flex items-center gap-4"><i class="fas fa-check-circle text-pink-500"></i> <span class="text-xs uppercase font-bold">Dermatologically Tested</span></div>
+                        <div class="flex items-center gap-4 text-zinc-800"><i class="fas fa-shipping-fast text-pink-600"></i> <span class="text-xs uppercase font-bold tracking-widest">Free Global Shipping</span></div>
+                        <div class="flex items-center gap-4 text-zinc-800"><i class="fas fa-shield-alt text-pink-600"></i> <span class="text-xs uppercase font-bold tracking-widest">Dermatologically Tested</span></div>
                     </div>
                 </div>
-                <div class="p-10 md:p-16 bg-black border-l border-white/5">
+                <!-- Form Side (Black) -->
+                <div class="p-10 md:p-16 bg-black">
                     <form class="space-y-6">
                         <div class="grid grid-cols-2 gap-4">
-                            <input type="text" class="w-full bg-zinc-900 border border-white/10 p-4 rounded-lg focus:border-pink-500 outline-none transition" placeholder="First Name">
-                            <input type="text" class="w-full bg-zinc-900 border border-white/10 p-4 rounded-lg focus:border-pink-500 outline-none transition" placeholder="Last Name">
+                            <input type="text" class="w-full bg-zinc-900 border border-zinc-800 p-4 rounded-xl text-white focus:border-pink-500 outline-none transition" placeholder="First Name">
+                            <input type="text" class="w-full bg-zinc-900 border border-zinc-800 p-4 rounded-xl text-white focus:border-pink-500 outline-none transition" placeholder="Last Name">
                         </div>
-                        <input type="text" class="w-full bg-zinc-900 border border-white/10 p-4 rounded-lg focus:border-pink-500 outline-none transition" placeholder="Phone Number">
-                        <textarea class="w-full bg-zinc-900 border border-white/10 p-4 rounded-lg h-28 focus:border-pink-500 outline-none transition" placeholder="Full Address..."></textarea>
-                        <button class="w-full pink-btn py-6 rounded-lg font-bold uppercase tracking-[0.3em] text-sm hover:scale-95 transition">Reserve Now — $99.00</button>
+                        <input type="text" class="w-full bg-zinc-900 border border-zinc-800 p-4 rounded-xl text-white focus:border-pink-500 outline-none transition" placeholder="Phone Number">
+                        <textarea class="w-full bg-zinc-900 border border-zinc-800 p-4 rounded-xl text-white h-28 focus:border-pink-500 outline-none transition" placeholder="Full Delivery Address..."></textarea>
+                        <button class="w-full pink-btn py-6 rounded-xl font-bold uppercase tracking-[0.3em] text-sm hover:scale-[0.98] transition">Confirm Order — $99.00</button>
                     </form>
                 </div>
             </div>
@@ -228,9 +276,14 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 border-t border-white/5 text-center bg-black">
-        <div class="heading-font text-pink-500 text-lg mb-6">ERS BEAUTY</div>
-        <p class="text-zinc-700 text-[9px] uppercase tracking-[0.4em]">© 2024 ERS Beauty. All rights reserved.</p>
+    <footer class="py-12 border-t border-zinc-100 text-center bg-zinc-50">
+        <div class="heading-font text-pink-600 text-lg mb-4">ERS BEAUTY</div>
+        <div class="flex justify-center space-x-8 text-[10px] font-bold uppercase tracking-widest text-zinc-500 mb-6">
+            <a href="#" class="hover:text-pink-600">Ingredients</a>
+            <a href="#" class="hover:text-pink-600">Sustainability</a>
+            <a href="#" class="hover:text-pink-600">Contact</a>
+        </div>
+        <p class="text-zinc-400 text-[10px] uppercase tracking-[0.4em]">© 2026 ERS Beauty. All rights reserved.</p>
     </footer>
 
     <script>
