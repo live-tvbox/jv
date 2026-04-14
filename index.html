@@ -217,7 +217,7 @@
                 <div class="flex flex-wrap items-center gap-10 pt-10 border-t border-zinc-100">
                     <div class="space-y-1">
                         <p class="text-zinc-400 text-[10px] font-bold uppercase tracking-[0.2em]">Retail Price</p>
-                        <span class="text-4xl font-black text-zinc-900">৳990.00</span>
+                        <span class="text-4xl font-black text-zinc-900">৳99.00</span>
                     </div>
                     <a href="#order" class="pink-btn px-12 py-5 rounded-2xl font-bold uppercase tracking-widest text-sm transition hover:shadow-xl hover:-translate-y-1">
                         Secure Order
@@ -240,7 +240,7 @@
                 
                 <div class="bg-white p-6 rounded-2xl border border-pink-100 mb-8">
                     <p class="text-xs uppercase font-bold text-zinc-400 mb-2">Total Amount</p>
-                    <p class="text-3xl font-bold text-zinc-900" id="display-price">$99.00</p>
+                    <p class="text-3xl font-bold text-zinc-900" id="display-price">৳99.00</p>
                 </div>
 
                 <div class="space-y-4">
@@ -333,7 +333,7 @@
     function updatePrice(qty) {
         const unitPrice = 99;
         const total = unitPrice * qty;
-        document.getElementById('display-price').textContent = '$' + total.toFixed(2);
+        document.getElementById('display-price').textContent = '৳' + total.toFixed(2);
     }
 </script>
 
