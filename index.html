@@ -7,6 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <!-- Include Google Font if not already present in head -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #1a1a1a; scroll-behavior: smooth; }
         .heading-font { font-family: 'Syncopate', sans-serif; }
@@ -23,15 +25,25 @@
         }
 
         /* Light Theme Hero Overlay */
-        .hero-overlay {
-            background: linear-gradient(to right, rgba(255,255,255,0.9) 10%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.8) 100%);
-        }
+        /* হালকা হিরো ওভারলে (ইমেজ পরিষ্কার দেখার জন্য) */
+.hero-overlay {
+    background: linear-gradient(
+        to right, 
+        rgba(255,255,255,0.6) 0%,   /* বাম দিকে হালকা সাদা আভা */
+        rgba(255,255,255,0) 40%,    /* মাঝখানে একদম ক্লিয়ার/ট্রান্সপারেন্ট */
+        rgba(255,255,255,0.4) 100%  /* ডান দিকে খুব হালকা আভা */
+    );
+}
 
-        @media (max-width: 768px) {
-            .hero-overlay {
-                background: linear-gradient(to top, rgba(255,255,255,0.9) 30%, rgba(255,255,255,0.4) 100%);
-            }
-        }
+@media (max-width: 768px) {
+    .hero-overlay {
+        background: linear-gradient(
+            to top, 
+            rgba(255,255,255,0.7) 10%,  /* নিচে সামান্য সাদা আভা লেখার জন্য */
+            rgba(255,255,255,0.1) 100%  /* উপরে প্রায় পুরোপুরি ক্লিয়ার */
+        );
+    }
+}
 
         /* Pink Arch for Why Choose Us */
         .pink-arch {
@@ -50,7 +62,7 @@
             <a href="#product" class="hover:text-pink-500 transition">Our Product</a>
             <a href="#order" class="hover:text-pink-500 transition">Order Now</a>
         </div>
-        <a href="#order" class="pink-btn text-[10px] font-bold px-8 py-3 rounded-full uppercase tracking-widest transition hover:scale-105">Shop Now</a>
+        <a href="#order" class="pink-btn text-[10px] font-bold px-8 py-3 rounded-full uppercase tracking-widest transition hover:scale-105">Buy Now</a>
     </nav>
 
     <!-- HERO SECTION -->
@@ -135,145 +147,195 @@
                 </p>
             </div>
 
-            <!-- Small Card 2 (White Theme) -->
-            <div class="md:col-span-4 rounded-[40px] bg-white border border-zinc-100 p-10 hover:shadow-2xl transition-all duration-500 group shadow-[0_10px_30px_rgba(0,0,0,0.02)]">
-                <div class="text-pink-600 mb-8 text-5xl opacity-80 group-hover:opacity-100 transition-opacity">
-                    <i class="fas fa-vial"></i>
-                </div>
-                <h4 class="text-2xl font-bold mb-4 italic uppercase text-zinc-900">Bio-Active <br>Peptides</h4>
-                <p class="text-zinc-500 text-sm leading-relaxed font-medium">
-                    Laboratory-engineered to mimic the skin's natural repair signals for instant firming.
-                </p>
-            </div>
-
-            <!-- Medium Feature Card (Pink Tint) -->
-            <div class="md:col-span-8 rounded-[40px] bg-gradient-to-br from-pink-50 to-white border border-pink-100 p-10 flex flex-col md:flex-row items-center gap-10 hover:shadow-xl transition-all duration-500">
-                <div class="md:w-1/2">
-                    <h4 class="text-3xl font-bold mb-4 italic uppercase leading-none text-zinc-900">Cruelty <br> <span class="text-pink-600 font-extrabold">Free.</span></h4>
-                    <p class="text-zinc-500 text-sm leading-relaxed font-medium">
-                        100% Vegan. Never tested on animals. Always ethical. Because luxury shouldn't cost a life.
-                    </p>
-                </div>
-                <div class="md:w-1/2 grid grid-cols-2 gap-4">
-                    <div class="bg-white p-5 rounded-3xl text-center border border-pink-100 shadow-sm">
-                        <span class="block text-3xl font-bold text-pink-600 italic">0%</span>
-                        <span class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Parabens</span>
-                    </div>
-                    <div class="bg-white p-5 rounded-3xl text-center border border-pink-100 shadow-sm">
-                        <span class="block text-3xl font-bold text-pink-600 italic">100%</span>
-                        <span class="text-[10px] uppercase tracking-widest text-zinc-400 font-bold">Vegan</span>
-                    </div>
-                </div>
-            </div>
+            
 
         </div>
     </div>
 </section>
 
-    <!-- Why Choose Us Section (White & Pink) -->
-    <section class="py-24 bg-white overflow-hidden">
-        <div class="container mx-auto px-6 md:px-20">
-            <div class="text-center mb-20">
-                <h2 class="heading-font text-3xl md:text-6xl font-bold mb-6 italic uppercase tracking-tight text-zinc-900">
-                    Why Choose Our <span class="text-pink-600">Skincare?</span>
-                </h2>
-                <p class="text-zinc-500 max-w-2xl mx-auto text-sm md:text-base tracking-wide">
-                    Discover skincare products crafted with pure, natural ingredients. Elevate your beauty routine with solutions designed to nourish and protect.
+
+
+    <!-- Product Detail Section (Modern & Professional English) -->
+<section id="product" class="py-24 bg-white border-t border-zinc-100" style="font-family: 'Poppins', sans-serif;">
+    <div class="container mx-auto px-6 md:px-20">
+        <!-- Section Title -->
+        <div class="text-center mb-20">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-zinc-900 tracking-tight">
+                Product <span class="text-pink-600">Showcase</span>
+            </h2>
+            <div class="w-16 h-1 bg-pink-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row items-center gap-12 md:gap-24">
+            <!-- Product Image Side -->
+            <div class="w-full lg:w-1/2 bg-[#fff1f6] rounded-[40px] p-12 flex justify-center items-center relative overflow-hidden border border-pink-50 group shadow-sm">
+                <!-- Subtle Gradient Glow -->
+                <div class="absolute inset-0 bg-gradient-to-br from-pink-200/30 to-transparent opacity-50"></div>
+                
+                <img src="pr.png" alt="Product" 
+                     class="w-72 md:w-96 z-10 drop-shadow-2xl transition duration-700 group-hover:scale-110 group-hover:rotate-1">
+            </div>
+
+            <!-- Product Info Side -->
+            <div class="w-full lg:w-1/2 space-y-8">
+                <div class="space-y-4">
+                    <span class="bg-pink-100 text-pink-600 text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">
+                        Premium Quality
+                    </span>
+                    <h3 class="text-3xl md:text-5xl font-bold text-zinc-900 leading-tight">
+                        Hydration Boost <br> <span class="text-pink-500">Cream</span>
+                    </h3>
+                </div>
+
+                <p class="text-zinc-500 text-lg leading-relaxed">
+                    Experience the ultimate hydration with our best-selling formula. Designed to deeply moisturize while improving skin elasticity, this lightweight and non-greasy cream leaves your skin feeling refreshed and luminous all day long.
                 </p>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center justify-between gap-10">
-                <div class="w-full md:w-[30%] space-y-16 order-2 md:order-1 text-center md:text-right">
-                    <div>
-                        <h4 class="text-2xl font-bold mb-4 text-pink-600 uppercase tracking-widest italic">100% Natural</h4>
-                        <p class="text-zinc-500 text-sm md:text-base leading-relaxed font-medium">Pure ingredients—no harsh chemicals or synthetic fragrances.</p>
-                    </div>
-                    <div>
-                        <h4 class="text-2xl font-bold mb-4 text-pink-600 uppercase tracking-widest italic">Eco-Friendly</h4>
-                        <p class="text-zinc-500 text-sm md:text-base leading-relaxed font-medium">Beauty without harm. 100% vegan and cruelty-free.</p>
-                    </div>
-                </div>
 
-                <div class="w-full md:w-[40%] flex justify-center order-1 md:order-2">
-                    <div class="relative flex justify-center items-center w-full max-w-[450px] md:max-w-[550px]">
-                        <div class="absolute w-72 h-72 md:w-96 md:h-96 bg-pink-100 rounded-full blur-[80px]"></div>
-                        <!-- <div class="pink-arch w-full h-[400px] md:h-[550px] absolute bottom-0 z-0 opacity-100 shadow-sm border border-pink-100"></div> -->
-                        <img src="p1.png" alt="Product" class="relative z-10 w-[85%] md:w-[110%] h-auto drop-shadow-2xl transform transition hover:scale-105 duration-700">
-                    </div>
-                </div>
+                <!-- Features List -->
+                <ul class="space-y-5">
+                    <li class="flex items-center gap-4 group">
+                        <div class="w-7 h-7 rounded-full bg-pink-500 flex items-center justify-center text-white text-xs transition group-hover:scale-110">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span class="text-zinc-800 font-semibold text-base md:text-lg">Deeply hydrates & locks in essential moisture.</span>
+                    </li>
+                    <li class="flex items-center gap-4 group">
+                        <div class="w-7 h-7 rounded-full bg-pink-500 flex items-center justify-center text-white text-xs transition group-hover:scale-110">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span class="text-zinc-800 font-semibold text-base md:text-lg">Enhances skin texture & natural radiance.</span>
+                    </li>
+                    <li class="flex items-center gap-4 group">
+                        <div class="w-7 h-7 rounded-full bg-pink-500 flex items-center justify-center text-white text-xs transition group-hover:scale-110">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span class="text-zinc-800 font-semibold text-base md:text-lg">Dermatologically tested for all skin types.</span>
+                    </li>
+                </ul>
 
-                <div class="w-full md:w-[30%] space-y-16 order-3 text-center md:text-left">
-                    <div>
-                        <h4 class="text-2xl font-bold mb-4 text-pink-600 uppercase tracking-widest italic">Expert Approved</h4>
-                        <p class="text-zinc-500 text-sm md:text-base leading-relaxed font-medium">Formulated by dermatologists for all skin types.</p>
+                <!-- Price & CTA -->
+                <div class="flex flex-wrap items-center gap-10 pt-10 border-t border-zinc-100">
+                    <div class="space-y-1">
+                        <p class="text-zinc-400 text-[10px] font-bold uppercase tracking-[0.2em]">Retail Price</p>
+                        <span class="text-4xl font-black text-zinc-900">৳990.00</span>
                     </div>
-                    <div>
-                        <h4 class="text-2xl font-bold mb-4 text-pink-600 uppercase tracking-widest italic">Proven Results</h4>
-                        <p class="text-zinc-500 text-sm md:text-base leading-relaxed font-medium">Visible transformation. Improved hydration and radiant glow.</p>
-                    </div>
+                    <a href="#order" class="pink-btn px-12 py-5 rounded-2xl font-bold uppercase tracking-widest text-sm transition hover:shadow-xl hover:-translate-y-1">
+                        Secure Order
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Product Detail Section -->
-    <section id="product" class="py-24 bg-zinc-50">
-        <div class="container mx-auto px-6 md:px-20">
-            <div class="text-center mb-16">
-                <h2 class="heading-font text-3xl md:text-5xl font-bold mb-4 italic uppercase text-zinc-900">Product <span class="text-pink-600 font-extrabold">Showcase</span></h2>
-            </div>
-            <div class="flex flex-col md:flex-row items-center gap-12 md:gap-24">
-                <div class="w-full md:w-1/2 bg-[#ffe4ee] rounded-[60px] p-12 flex justify-center items-center relative overflow-hidden border border-pink-100 group">
-                    <img src="pr.png" alt="Product" class="w-64 md:w-80 z-10 drop-shadow-2xl transition group-hover:scale-110 duration-700">
-                </div>
-                <div class="w-full md:w-1/2 space-y-8">
-                    <h3 class="heading-font text-3xl md:text-4xl font-bold text-zinc-900">Hydration Boost Cream</h3>
-                    <p class="text-zinc-600 leading-relaxed font-medium">Our best-selling formula deeply moisturizes and improves skin elasticity. Lightweight and non-greasy.</p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3 text-pink-600 font-bold italic">
-                            <i class="fas fa-check-circle"></i> <span class="text-zinc-700">Deeply hydrates & locks moisture.</span>
-                        </li>
-                        <li class="flex items-center gap-3 text-pink-600 font-bold italic">
-                            <i class="fas fa-check-circle"></i> <span class="text-zinc-700">Enhances skin texture.</span>
-                        </li>
-                    </ul>
-                    <div class="flex items-center gap-8 pt-6">
-                        <a href="#order" class="bg-black text-white font-bold py-4 px-10 rounded-full hover:bg-pink-600 transition uppercase tracking-widest text-xs">Buy Now</a>
-                        <span class="text-3xl font-bold text-zinc-900">৳99.00</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
     <!-- Order Form Section -->
-    <section id="order" class="py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-0 rounded-[40px] overflow-hidden border border-zinc-100 shadow-2xl">
-                <!-- Info Side (Pink) -->
-                <div class="p-10 md:p-16 bg-pink-50">
-                    <h2 class="heading-font text-4xl font-bold mb-6 italic text-zinc-900 uppercase">Secure Your <br><span class="text-pink-600">Regimen.</span></h2>
-                    <p class="text-zinc-600 mb-8 font-medium">Join the elite. Secure your limited first-edition Obsidian Set today.</p>
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-4 text-zinc-800"><i class="fas fa-shipping-fast text-pink-600"></i> <span class="text-xs uppercase font-bold tracking-widest">Free Global Shipping</span></div>
-                        <div class="flex items-center gap-4 text-zinc-800"><i class="fas fa-shield-alt text-pink-600"></i> <span class="text-xs uppercase font-bold tracking-widest">Dermatologically Tested</span></div>
-                    </div>
+    <!-- Order Form Section -->
+<section id="order" class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-0 rounded-[40px] overflow-hidden border border-zinc-100 shadow-2xl">
+            <!-- Info Side (Pink) -->
+            <div class="p-10 md:p-16 bg-pink-50">
+                <h2 class="heading-font text-4xl font-bold mb-6 italic text-zinc-900 uppercase">Secure Your <br><span class="text-pink-600">Regimen.</span></h2>
+                <p class="text-zinc-600 mb-8 font-medium">নিচের ফর্মে আপনার সঠিক তথ্য দিয়ে অর্ডারটি সম্পন্ন করুন। আমাদের প্রতিনিধি কল দিয়ে কনফার্ম করবেন।</p>
+                
+                <div class="bg-white p-6 rounded-2xl border border-pink-100 mb-8">
+                    <p class="text-xs uppercase font-bold text-zinc-400 mb-2">Total Amount</p>
+                    <p class="text-3xl font-bold text-zinc-900" id="display-price">$99.00</p>
                 </div>
-                <!-- Form Side (Black) -->
-                <div class="p-10 md:p-16 bg-black">
-                    <form class="space-y-6">
-                        <div class="grid grid-cols-2 gap-4">
-                            <input type="text" class="w-full bg-zinc-900 border border-zinc-800 p-4 rounded-xl text-white focus:border-pink-500 outline-none transition" placeholder="First Name">
-                            <input type="text" class="w-full bg-zinc-900 border border-zinc-800 p-4 rounded-xl text-white focus:border-pink-500 outline-none transition" placeholder="Last Name">
-                        </div>
-                        <input type="text" class="w-full bg-zinc-900 border border-zinc-800 p-4 rounded-xl text-white focus:border-pink-500 outline-none transition" placeholder="Phone Number">
-                        <textarea class="w-full bg-zinc-900 border border-zinc-800 p-4 rounded-xl text-white h-28 focus:border-pink-500 outline-none transition" placeholder="Full Delivery Address..."></textarea>
-                        <button class="w-full pink-btn py-6 rounded-xl font-bold uppercase tracking-[0.3em] text-sm hover:scale-[0.98] transition">Confirm Order — $99.00</button>
-                    </form>
+
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 text-zinc-800"><i class="fas fa-shipping-fast text-pink-600"></i> <span class="text-xs uppercase font-bold tracking-widest">Free Global Shipping</span></div>
+                    <div class="flex items-center gap-4 text-zinc-800"><i class="fas fa-shield-alt text-pink-600"></i> <span class="text-xs uppercase font-bold tracking-widest">Cash On Delivery</span></div>
                 </div>
             </div>
+
+            <!-- Form Side (Black) -->
+            <div class="p-10 md:p-16 bg-black">
+                <form action="process-order.php" method="POST" class="space-y-5">
+                    <!-- Full Name -->
+                    <div class="space-y-2">
+                        <label class="text-[9px] uppercase tracking-[0.2em] font-bold text-pink-500">Full Name</label>
+                        <input type="text" name="full_name" required class="w-full bg-zinc-900 border border-zinc-800 p-4 rounded-xl text-white focus:border-pink-500 outline-none transition" placeholder="আপনার নাম">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- Number -->
+                        <div class="space-y-2">
+                            <label class="text-[9px] uppercase tracking-[0.2em] font-bold text-pink-500">Phone Number</label>
+                            <input type="tel" name="number" required class="w-full bg-zinc-900 border border-zinc-800 p-4 rounded-xl text-white focus:border-pink-500 outline-none transition" placeholder="01XXXXXXXXX">
+                        </div>
+                        <!-- Quantity -->
+                        <!-- Quantity (Updated to Number Input) -->
+<div class="space-y-2">
+    <label class="text-[9px] uppercase tracking-[0.2em] font-bold text-pink-500">Quantity</label>
+    <div class="relative">
+        <input type="number" name="quantity" id="qty" min="1" value="1" 
+               oninput="updatePrice(this.value)" 
+               class="w-full bg-zinc-900 border border-zinc-800 p-4 rounded-xl text-white focus:border-pink-500 outline-none transition [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" 
+               placeholder="1">
+        <!-- প্লাস-মাইনাস ইন্ডিকেটর (Optional UI help) -->
+        <span class="absolute right-4 top-1/2 -translate-y-1/2 text-[10px] text-zinc-500 font-bold uppercase pointer-events-none">Pcs</span>
+    </div>
+</div>
+                    </div>
+
+                    <!-- District Dropdown -->
+                    <div class="space-y-2">
+                        <label class="text-[9px] uppercase tracking-[0.2em] font-bold text-pink-500">Select District</label>
+                        <select name="district" id="district-list" required class="w-full bg-zinc-900 border border-zinc-800 p-4 rounded-xl text-white focus:border-pink-500 outline-none transition">
+                            <option value="">Select your district</option>
+                        </select>
+                    </div>
+
+                    <!-- Full Address -->
+                    <div class="space-y-2">
+                        <label class="text-[9px] uppercase tracking-[0.2em] font-bold text-pink-500">Delivery Address</label>
+                        <textarea name="address" required class="w-full bg-zinc-900 border border-zinc-800 p-4 rounded-xl text-white h-24 focus:border-pink-500 outline-none transition" placeholder="গ্রাম/মহল্লা, থানা এবং পোস্ট কোড লিখুন"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full pink-btn py-5 rounded-xl font-bold uppercase tracking-[0.3em] text-sm hover:scale-[0.98] transition">Confirm Order</button>
+                </form>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Script for Dynamic District Dropdown and Price -->
+<script>
+    const addressData = {
+        "Dhaka": ["Dhaka", "Faridpur", "Gazipur", "Gopalganj", "Kishoreganj", "Madaripur", "Manikganj", "Munshiganj", "Narayanganj", "Narsingdi", "Rajbari", "Shariatpur", "Tangail"],
+        "Chattogram": ["Bandarban", "Brahmanbaria", "Chandpur", "Chattogram", "Cumilla", "Cox's Bazar", "Feni", "Khagrachhari", "Lakshmipur", "Noakhali", "Rangamati"],
+        "Rajshahi": ["Bogura", "Joypurhat", "Naogaon", "Natore", "Chapainawabganj", "Pabna", "Rajshahi", "Sirajganj"],
+        "Khulna": ["Bagerhat", "Chuadanga", "Jashore", "Jhenaidah", "Khulna", "Kushtia", "Magura", "Meherpur", "Narail", "Satkhira"],
+        "Barishal": ["Barguna", "Barishal", "Bhola", "Jhalokathi", "Patuakhali", "Pirojpur"],
+        "Sylhet": ["Habiganj", "Moulvibazar", "Sunamganj", "Sylhet"],
+        "Rangpur": ["Dinajpur", "Gaibandha", "Kurigram", "Lalmonirhat", "Nilphamari", "Panchagarh", "Rangpur", "Thakurgaon"],
+        "Mymensingh": ["Jamalpur", "Mymensingh", "Netrokona", "Sherpur"]
+    };
+
+    const districtDropdown = document.getElementById('district-list');
+    
+    // JSON থেকে সব ডিস্ট্রিক্ট এক জায়গায় করা এবং ড্রপডাউনে যোগ করা
+    const allDistricts = [];
+    for (let division in addressData) {
+        allDistricts.push(...addressData[division]);
+    }
+    
+    // Sort and Populate
+    allDistricts.sort().forEach(district => {
+        const option = document.createElement('option');
+        option.value = district;
+        option.textContent = district;
+        districtDropdown.appendChild(option);
+    });
+
+    // Price Update Logic
+    function updatePrice(qty) {
+        const unitPrice = 99;
+        const total = unitPrice * qty;
+        document.getElementById('display-price').textContent = '$' + total.toFixed(2);
+    }
+</script>
 
     <!-- Footer -->
     <footer class="py-12 border-t border-zinc-100 text-center bg-zinc-50">
